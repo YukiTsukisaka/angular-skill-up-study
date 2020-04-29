@@ -1,0 +1,27 @@
+<h1>Angular基本</h1>
+
+<h2>*ngIfのサンプル</h2>
+<div *ngIf="isShow">
+    <p>内容が表示されました。</p>
+</div>
+
+<input #btn type="button" value="表示" (click)="show()">
+
+<h2>*ngForのサンプル</h2>
+<a href="https://angular.jp/guide/displaying-data" target="_blank">参考URL</a>
+<p>シンプルな繰り返し</p>
+<!-- 都市の配列分をループ -->
+<ul>
+    <li *ngFor="let city of cities">{{ city }}</li>
+</ul>
+
+<p>プルダウンメニュー1</p>
+<select>
+    <!-- index as iで配列の添字表示-->
+    <option *ngFor="let city of cities; index as i" value="{{ i }}">{{ city }}</option>
+</select>
+
+<p>プルダウンメニュー2</p>
+<select>
+    <option *ngFor="let city of cities; index as i" value="{{ i }}">{{ city }}</option>
+</select>
